@@ -1,0 +1,17 @@
+<%- include("Partials/header") -%>
+
+<div class="adj">
+  <h1>HOME</h1>
+  <p>Hello my name is Sayantan Chowdhury, Welcome to my blog site.</p>
+  <% posts.forEach(function(ele){ %>
+  <h1> <%= ele.title %> </h1>
+  <p>
+    <%=ele.content.substring(0, 100) + " ..." %><a href="/posts/<%= ele._id %>"
+      >Read More</a
+    >
+  </p>
+  <% }) %>
+</div>
+
+
+<%- include("Partials/footer") -%>
